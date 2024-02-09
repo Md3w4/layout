@@ -11,29 +11,71 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
+
   <body>
     <header>
-      <nav>
+      <nav id="navbar">
         <h2>Masdew</h2>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="https://www.instagram.com/mdewa__/" target="_blank">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="https://github.com/Md3w4" target="_blank">Project</a></li>
+        <ul id="menu" class="nav-menu">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="https://www.instagram.com/mdewa__/"
+              target="_blank"
+              >About</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown">
+              <button class="dropbtn">Product</button>
+              <div class="dropdown-content">
+                <a class="nav-link" href="baju.html">Baju</a>
+                <a class="nav-link" href="sepatu.html">Sepatu</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/Md3w4" target="_blank"
+              >Project</a
+            >
+          </li>
         </ul>
-        <button class="portfolio-btn"><a href="https://md3w4.github.io" target="_blank">Portfolio</a></button>
+        <div class="hamburger">
+          <i class="ph ph-list"></i>
+        </div>
+        <div class="btn-nav">
+          <button class="portfolio-btn">
+            <a href="https://md3w4.github.io/" target="_blank">Portfolio</a>
+          </button>
+        </div>
       </nav>
     </header>
 
     <main>
       <div class="text">
-        <h1>Pemrograman <br>Website</h1>
+        <h1>Pemrograman <br />Website</h1>
         <p>Pembuatan layout sederhana</p>
-        <button class="portfolio-btn"><a href="https://md3w4.github.io/" target="_blank">Portfolio</a></button>
+        <button class="portfolio-btn">
+          <a href="https://md3w4.github.io/" target="_blank">Portfolio</a>
+        </button>
       </div>
-      <img src="photos.png" alt="foto">
+      <img src="img/photos.png" alt="foto" />
     </main>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+
+      hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
+    </script>
 
     <footer>
       <p>Maha Dewa Maulana M</p>

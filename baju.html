@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proweb</title>
+    <link rel="stylesheet" href="product.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav id="navbar">
+        <h2>Masdew</h2>
+        <ul id="menu" class="nav-menu">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="https://www.instagram.com/mdewa__/"
+              target="_blank"
+              >About</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown">
+              <button class="dropbtn">Product</button>
+              <div class="dropdown-content">
+                <a class="nav-link" href="baju.html">Baju</a>
+                <a class="nav-link" href="sepatu.html">Sepatu</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/Md3w4" target="_blank"
+              >Project</a
+            >
+          </li>
+        </ul>
+        <div class="hamburger">
+          <i class="ph ph-list"></i>
+        </div>
+        <div class="btn-nav">
+          <button class="portfolio-btn">
+            <a href="https://md3w4.github.io/" target="_blank">Portfolio</a>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <table style="width: 100%">
+        <tr>
+            <th colspan="2">Produk</th>
+            <th>Harga</th>
+          </tr>
+          <tr>
+            <td><img src="img/carhart jacket.jpg" alt="carhart" /></td>
+            <td>Carhart Jacket</td>
+            <td>Rp3.850.000</td>
+          </tr>
+          <tr>
+            <td><img src="img/lacoste.png" alt="lacoste.png" /></td>
+            <td>Lacoste Polo</td>
+            <td>Rp1.399.000</td>
+          </tr>
+          <tr>
+            <td><img src="img/polo rl.png" alt="polo rl" /></td>
+            <td>Polo Ralph Lauren</td>
+            <td>Rp1.199.000</td>
+          </tr>
+          <tr>
+            <td><img src="img/stone island sweater.jpg" alt="stone island" /></td>
+            <td>Stone Island Sweater</td>
+            <td>Rp3.799.000</td>
+          </tr>
+          <tr>
+            <td><img src="img/polo uniqlo stripe.jpg" alt="polo uniqlo" /></td>
+            <td>Uniqlo Stripe Polo</td>
+            <td>Rp459.000</td>
+          </tr>
+      </table>
+    </main>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+
+      hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
+    </script>
+
+    <footer>
+      <p>Maha Dewa Maulana M</p>
+    </footer>
+  </body>
+</html>

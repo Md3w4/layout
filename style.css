@@ -30,6 +30,9 @@ nav ul {
 
 nav ul li {
     list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul li a {
@@ -39,9 +42,59 @@ nav ul li a {
     margin-right: 25px;
 }
 
+.dropbtn {
+    background-color: black;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    margin-right: 10px;
+    margin-left: -10px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    margin-left: -10px;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #1d9bf0;
+}
+
+.hamburger {
+    display: none;
+}
+
 .portfolio-btn {
     background: #1d9bf0;
-    color: #fff !important; 
+    color: #fff;
     padding: 6px 30px;
     border: none;
     font-size: 16px;
@@ -63,17 +116,17 @@ main {
     color: #fff;
 }
 
-main img{
+main img {
     width: 400px;
 }
 
-main .text h1{
+main .text h1 {
     font-size: 44px;
     margin-bottom: 10px;
     width: 100%;
 }
 
-main .text p{
+main .text p {
     font-size: 16px;
     margin-bottom: 15px;
 }
@@ -90,4 +143,86 @@ footer {
     background-color: #1d9bf0;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+}
+
+@media (width < 900px) {
+
+    #navbar {
+        position: relative;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        border: 1px solid #1d9bf0;
+        border-top: none;
+        border-radius: 0 0 5px 5px;
+        padding: 10px 0;
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    .nav-item {
+        text-align: center;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 10px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .nav-link:hover {
+        background-color: #1d9bf0;
+    }
+
+    .btn-nav {
+        display: none;
+    }
+
+    .dropdown-content{
+        min-width: 0px;
+    }
+
+    main {
+        padding: 0 20px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 550px;
+
+    }
+
+    main img {
+        width: 100%;
+        order: -1;
+    }
+
+    .hamburger {
+        display: flex;
+        color: white;
+        font-size: 24px;
+        align-items: center;
+    }
+
+    footer {
+        position: sticky;
+        bottom: 0;
+        width: 100%;
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #fff;
+        background-color: #1d9bf0;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
 }
